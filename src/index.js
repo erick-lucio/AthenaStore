@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Website from "./routes/mainRoutes";
-import { Provider } from 'react-redux'
-import store from './redux/index'
+
 
 import "./assets/css/index.css";
 import "./assets/css/cart.css";
@@ -14,7 +13,5 @@ import "./assets/css/product_cart.css"
 
 const dom_id = document.getElementById("body_id");
 ReactDOM.render(
-    <Provider store={store}>
-        <Website />
-    </Provider>,
+        <Website />,
  dom_id);
