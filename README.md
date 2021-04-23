@@ -2,9 +2,9 @@
 * Author : Erick Lucio *
 * This project can be found at [github](https://github.com/erick-lucio/frontEndAthenaStore) *
 
-### This project were built to practice my code skills using `[React](https://reactjs.org/)` and `[Spring](https://spring.io/)`
+### This project were built to practice my code skills using [React](https://reactjs.org/). and [Spring](https://spring.io/).
 
-### Since the goal is to practice a fullstack skill i am not doing the whole `Css` i will be using `[Material Ui](https://material-ui.com/)`
+### Since the goal is to practice a fullstack skill i am not doing the whole `CSS` i will be using [Material Ui](https://material-ui.com/).
 
 ## **User History**
 
