@@ -12,7 +12,7 @@ const MainPage = () => {
   <>  
     <Container 
       maxWidth="xl" 
-      disableGutters="true"
+      disableGutters={true}
       >      
       <Box >
         teste

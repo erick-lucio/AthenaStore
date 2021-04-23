@@ -3,7 +3,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import MainPage from "../pages/index.jsx";
-import Header from '../pages/header.jsx'
+import Header from '../components/header.jsx'
 
 const history = createBrowserHistory
 export default function Website() {

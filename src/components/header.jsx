@@ -18,7 +18,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
-    maxHeight: '10.5%'
+    maxHeight: '66px'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -175,7 +175,7 @@ export default function PrimarySearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            Athena Store
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
