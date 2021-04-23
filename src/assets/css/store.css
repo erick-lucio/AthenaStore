@@ -1,0 +1,17 @@
+.main_div_content{
+    display: flex;
+    height: 90%;
+    width: 100%;
+    flex-direction: row;
+}
+.store_div_container{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+@media (max-width: 850px){
+    .main_div_content{
+        flex-direction: column;
+    }
+}
