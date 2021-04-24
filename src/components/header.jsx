@@ -12,8 +12,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     display: 'none',
-    [theme.breakpoints.up('s')]: {
+    [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
   },
@@ -83,10 +83,23 @@ const useStyles = makeStyles((theme) => ({
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);  
+  const [cartAnchorEl, setCartAnchorEl] = React.useState(null);  
 
   const isMenuOpen = Boolean(anchorEl);
+  const isCartOpen = Boolean(cartAnchorEl);
+  const isCartMobileOpen = Boolean(cartAnchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+
+
+  const handleCartMenuOpen = (event) => {
+    setCartAnchorEl(event.currentTarget);
+  };
+
+  const handleCartMenuClose = () => {
+    setCartAnchorEl(null);
+  };
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -116,8 +129,28 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Category</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Category</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Category</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Category</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Category</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Category</MenuItem>
+    </Menu>
+  );
+
+  const CartId = 'primary-cart-itens';
+  const renderCart = (
+    <Menu
+      anchorEl={cartAnchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={CartId}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isCartOpen}
+      onClose={handleCartMenuClose}
+    >
+      <MenuItem onClick={handleCartMenuClose}>itens</MenuItem>
+      <MenuItem onClick={handleCartMenuClose}>Itens</MenuItem>
     </Menu>
   );
 
@@ -132,23 +165,17 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
+      <MenuItem
+        onClick={handleCartMenuOpen}>
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
+            <ShoppingCartIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
+        <p>Cart</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      <MenuItem 
+        onClick={handleMobileMenuClose}>
         <IconButton
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -171,6 +198,7 @@ export default function PrimarySearchAppBar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={handleProfileMenuOpen}
           >
             <MenuIcon />
           </IconButton>
@@ -192,14 +220,12 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 6 new mails" color="inherit">
-              <Badge badgeContent={6} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="show 99 new notifications" color="inherit">
+            <IconButton 
+              aria-label="show 99 new notifications" 
+              color="inherit"
+              onClick={handleCartMenuOpen}>
               <Badge badgeContent={99} color="secondary">
-                <NotificationsIcon />
+                <ShoppingCartIcon />
               </Badge>
             </IconButton>
             <IconButton
@@ -207,7 +233,6 @@ export default function PrimarySearchAppBar() {
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
               color="inherit"
             >
               <AccountCircle />
@@ -228,6 +253,7 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      {renderCart}
     </div>
   );
 }

@@ -14,8 +14,8 @@ const MainPage = () => {
       maxWidth="xl" 
       disableGutters={true}
       >      
-      <Box >
-        teste
+      <Box textAlign="center">
+        Tela vazia
       </Box>
     </Container>  
   </>
