@@ -2,11 +2,11 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -85,9 +85,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: 'index_bundle.js',
-    publicPath: '/'
+    publicPath: "/"
   },
-
+  resolve: {
+    extensions: ['.tsx', '.js', '.ts', '.png', '.css', '.jpg', '.jpeg', '.png', '.gif', '.svg'],
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./public/index.html",
@@ -96,37 +98,3 @@ module.exports = {
     }),
   ],
 };
-/*
-module.exports = {
-  entry: './src/app.js',
-  output: {
-    path: __dirname + '/dist',
-    filename: 'build.js'
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader'
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/'
-            }
-          }
-        ]
-      }
-    ]
-  },
-  watch: true
-}
-
-
-
-
-*/

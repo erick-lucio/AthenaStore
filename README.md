@@ -1,6 +1,7 @@
 # Athena Store
-* Author : Erick Lucio *
-* This project can be found at [github](https://github.com/erick-lucio/frontEndAthenaStore).
+
+- Author : Erick Lucio \*
+- This project can be found at [github](https://github.com/erick-lucio/frontEndAthenaStore).
 
 ### This project were built to practice my code skills using [React](https://reactjs.org/). and [Spring](https://spring.io/).
 
@@ -18,11 +19,10 @@ this header will have too an `cart` icon that will show how many itens the user 
 
 ## Pages
 
-    - Login 
+    - Login
     - SignIn
     - Store
         - Cart
         - Product
 
 ## EndPoints
-

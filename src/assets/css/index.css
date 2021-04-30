@@ -3,10 +3,9 @@
   padding: 0;
   margin: 0;
   font-size: 14px;
-  
 }
 html body {
-  overflow-x:hidden
+  overflow-x: hidden;
 }
 #body_id {
   height: 100vh;
@@ -16,40 +15,32 @@ html body {
 @font-face {
   font-family: FontHoustron;
   src: url(../fonts/Houston.otf);
-  
 }
 @font-face {
   font-family: FontSomeone;
   src: url(../fonts/Someone.otf);
-  
 }
 @font-face {
   font-family: FontMentality;
   src: url(../fonts/Mentality.otf);
-  
 }
 @font-face {
   font-family: FontBonjour;
   src: url(../fonts/Bonjour.otf);
-  
 }
 @font-face {
   font-family: FontNeonTech;
   src: url(../fonts/NeonTech.ttf);
-  
 }
 @font-face {
   font-family: FontBioTech;
   src: url(../fonts/BIOTECH-Regular.ttf);
-  
 }
 @font-face {
   font-family: FontQuicksand;
   src: url(../fonts/Quicksand_Book.otf);
-  
 }
 @font-face {
   font-family: FontNaruto;
   src: url(../fonts/njnaruto.ttf);
-  
 }
