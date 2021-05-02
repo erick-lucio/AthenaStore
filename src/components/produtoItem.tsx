@@ -2,20 +2,38 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import Avatar from "@material-ui/core/Avatar";
+import Button from "@material-ui/core/Button";
 
 import Product from "../models/product";
+
+import noImg from "../assets/imgs/noImg.jpg"
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    height: 250,
-    width: 250,
+    width: "250px",
   },
   gridItens: {
-    paddingTop: "25px",
+    border: "1px solid black",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
   },
   control: {
     padding: theme.spacing(2),
+  },
+  productImg: {
+    height: "20%",
+    width: "100%",
+    borderRadius : "0%",
+  },
+  TextItem: {
+    width: "100%",
+  },
+  buyButton: {
+    marginLeft: "55%",
+    marginBottom: "1%"
   },
 }));
 
@@ -36,18 +54,24 @@ export default function ProductItem(props: any) {
         <Grid
           container
           justify="center"
-          spacing={4}
           className={classes.gridItens}
         >
-          {produto.nome}
-          <br />
-          {produto.preco}
-          <br />
-          {produto.quantidadeStock}
-          <br />
-          {produto.quantidade}
-          <br />
-          {produto.imgUrl}
+          <Avatar 
+            src={noImg}
+            className={classes.productImg}
+          />
+          <br/>
+          <p className={classes.TextItem}>{produto.nome}</p>
+          <br/>
+          <p className={classes.TextItem}>US$ {produto.preco}</p>  
+          <br/>
+          <p className={classes.TextItem}>{produto.quantidadeStock}Em estoque</p>  
+          <br/>
+          <p className={classes.TextItem}>{produto.quantidade}</p> 
+          <br/>
+          <p className={classes.TextItem}>{produto.imgUrl}</p>
+          <br/>
+          <Button variant="contained" color="secondary" className={classes.buyButton}>Buy</Button>
         </Grid>
       </Grid>
     </Grid>

@@ -88,7 +88,7 @@ module.exports = {
     publicPath: "/"
   },
   resolve: {
-    extensions: ['.tsx', '.js', '.ts', '.png', '.css', '.jpg', '.jpeg', '.png', '.gif', '.svg'],
+    extensions: ['.tsx', '.js', '.ts', '.png', '.css', '.jpg', '.jpeg', '.gif', '.svg'],
   },
   plugins: [
     new HtmlWebPackPlugin({

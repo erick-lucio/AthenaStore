@@ -4,6 +4,7 @@ export default class Product {
   quantidadeStock: number = 0;
   quantidade: number = 0;
   imgUrl: string = "";
+  categoria: number = 0
   constructor(
     nome: string,
     preco: number,
