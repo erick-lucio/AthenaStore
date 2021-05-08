@@ -32,6 +32,17 @@ export default function StorePage() {
       quantidadeStock: 79,
       quantidade: 0,
       imgUrl: "/img/aiiij44",
+      categoria: 0,
+      observacao: "obs do produto"
+    },
+    {
+      nome: "Produto",
+      preco: 12.34,
+      quantidadeStock: 79,
+      quantidade: 0,
+      imgUrl: "/img/aiiij44",
+      categoria: 0,
+      observacao: "obs do produto"
     },
     {
       nome: "Produto",
@@ -67,6 +78,8 @@ export default function StorePage() {
       quantidadeStock: 79,
       quantidade: 0,
       imgUrl: "/img/aiiij44",
+      categoria: 0,
+      observacao: "obs do produto"
     },
     {
       nome: "Produto",
@@ -83,8 +96,8 @@ export default function StorePage() {
       imgUrl: "/img/aiiij44",
     },
     {
-      nome: "Produto",
-      preco: 12.34,
+      nome: "Elojob ate o prata",
+      preco: 152.34,
       quantidadeStock: 79,
       quantidade: 0,
       imgUrl: "/img/aiiij44",

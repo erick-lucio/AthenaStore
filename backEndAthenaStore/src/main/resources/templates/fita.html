@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<title>Prova 1</title>
+	
+</head>
+<body>
+	
+	<h1>Adicionar Fita </h1>
+	<form action="#" th:action="@{/fita}" th:object="${fita}" method="post">
+		<label>Nome</label>
+		<input type="text" th:field="*{nome}" /> <br/>
+		<label>Preço</label>
+		<input type="text" th:field="*{preco}" /> <br/>		
+		
+		<button type="submit">Salvar</button>
+	</form>
+	
+	<h1>Deletar Fita </h1>
+	<form action="#" th:action="@{/deletarfita}" th:object="${fita}" method="post">
+		<label>id</label>
+		<input type="text" th:field="*{id}" /> <br/>	
+		
+		<button type="submit">Salvar</button>
+	</form>
+	
+	<h1>Atualizar Fita </h1>
+	<form action="#" th:action="@{/atualizarfita}" th:object="${fita}" method="post">
+		<label>id</label>
+		<input type="text" th:field="*{id}" /> <br/>	
+		<label>Nome</label>
+		<input type="text" th:field="*{nome}" /> <br/>
+		<label>Preço</label>
+		<input type="text" th:field="*{preco}" /> <br/>	
+		
+		<button type="submit">Salvar</button>
+	
+	
+	<div style="position:absolute;right:30%;top:0px;">
+		<h1>Lista Fitas </h1>
+		<table border="1px" >
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Preco</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="fita : ${fitaList}">
+				<td><span th:text="${fita.id}"></span></td>
+				<td><span th:text="${fita.nome}"></span></td>
+				<td><span th:text="${fita.preco}"></span></td>
+	
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	
+
+	
+</body>
+</html>

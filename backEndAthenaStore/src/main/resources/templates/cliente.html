@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<title>Prova 1</title>
+	
+</head>
+<body>
+	<h1>Adicionar Cliente </h1>
+	<form action="#" th:action="@{/cliente}" th:object="${cliente}" method="post">
+		<label>Nome</label>
+		<input type="text" th:field="*{nome}" /> <br/>
+		<label>CPF</label>
+		<input type="text" th:field="*{CPF}" /> <br/>		
+		
+		<button type="submit">Salvar</button>
+	</form>
+	
+	<h1>Deletar Cliente </h1>
+	<form action="#" th:action="@{/deletarcliente}" th:object="${cliente}" method="post">
+		<label>id</label>
+		<input type="text" th:field="*{id}" /> <br/>	
+		
+		<button type="submit">Salvar</button>
+	</form>
+	
+	<h1>Atualizar Cliente </h1>
+	<form action="#" th:action="@{/atualizarcliente}" th:object="${cliente}" method="post">
+		<label>id</label>
+		<input type="text" th:field="*{id}" /> <br/>	
+		<label>Nome</label>
+		<input type="text" th:field="*{nome}" /> <br/>
+		<label>CPF</label>
+		<input type="text" th:field="*{CPF}" /> <br/>	
+		
+		<button type="submit">Salvar</button>
+	</form>
+	
+	<div style="position:absolute;right:30%;top:0px;">
+		<h1>Lista Cliente </h1>
+		<table border="1px">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>CPF</th>
+				<th>Data Criação</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="cliente : ${clienteList}">
+				<td><span th:text="${cliente.id}"></span></td>
+				<td><span th:text="${cliente.nome}"></span></td>
+				<td><span th:text="${cliente.CPF}"></span></td>
+				<td><span th:text="${cliente.data}"></span></td>
+		
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</body>
+</html>

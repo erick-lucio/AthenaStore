@@ -1,25 +1,64 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
+### Git ignore front end
 
 # dependencies
-/node_modules
+/frontEndAthenaStore/node_modules
 
 # testing
-/coverage
+/frontEndAthenaStore/coverage
 
 # production
-/build
-/functions-build
+/frontEndAthenaStore/build
+/frontEndAthenaStore/functions-build
 
 # netlify
-.netlify
+/frontEndAthenaStore/.netlify
 
 # misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+/frontEndAthenaStore/.DS_Store
+/frontEndAthenaStore/.env.local
+/frontEndAthenaStore/.env.development.local
+/frontEndAthenaStore/.env.test.local
+/frontEndAthenaStore/.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+/frontEndAthenaStore/npm-debug.log*
+/frontEndAthenaStore/yarn-debug.log*
+/frontEndAthenaStore/yarn-error.log*
+
+
+
+### Git ignore backend
+
+/backEndAthenaStore/HELP.md
+/backEndAthenaStore/target/
+/backEndAthenaStore/!.mvn/wrapper/maven-wrapper.jar
+/backEndAthenaStore/!**/src/main/**/target/
+/backEndAthenaStore/!**/src/test/**/target/
+
+### STS ###
+/backEndAthenaStore/.apt_generated
+/backEndAthenaStore/.classpath
+/backEndAthenaStore/.factorypath
+/backEndAthenaStore/.project
+/backEndAthenaStore/.settings
+/backEndAthenaStore/.springBeans
+/backEndAthenaStore/.sts4-cache
+
+### IntelliJ IDEA ###
+/backEndAthenaStore/.idea
+/backEndAthenaStore/*.iws
+/backEndAthenaStore/*.iml
+/backEndAthenaStore/*.ipr
+
+### NetBeans ###
+/backEndAthenaStore/nbproject/private/
+/backEndAthenaStore/nbbuild/
+/backEndAthenaStore/dist/
+/backEndAthenaStore/nbdist/
+/backEndAthenaStore/.nb-gradle/
+/backEndAthenaStore/build/
+/backEndAthenaStore/!**/src/main/**/build/
+/backEndAthenaStore/!**/src/test/**/build/
+
+### VS Code ###
+/backEndAthenaStore/.vscode/
+

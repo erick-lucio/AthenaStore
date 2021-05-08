@@ -30,10 +30,22 @@ const useStyles = makeStyles((theme) => ({
   },
   TextItem: {
     width: "100%",
+    marginLeft: "15%",
+    marginTop: "2%",
+  },
+  TittleItemText: {
+    fontSize: "1.8rem",
+  },
+  PriceItemText: {
+    fontWeight: "bolder",
+    width: "100%",
+    marginLeft: "15%",    
+    marginTop: "2%",
   },
   buyButton: {
     marginLeft: "55%",
-    marginBottom: "1%"
+    marginBottom: "1%",        
+    marginTop: "10%",
   },
 }));
 
@@ -45,7 +57,9 @@ export default function ProductItem(props: any) {
     props.item.preco,
     props.item.quantidadeStock,
     props.item.quantidade,
-    props.item.imgUrl
+    props.item.imgUrl,
+    props.item.categoria,
+    props.item.observacao
   );
 
   return (
@@ -61,15 +75,11 @@ export default function ProductItem(props: any) {
             className={classes.productImg}
           />
           <br/>
-          <p className={classes.TextItem}>{produto.nome}</p>
+          <p className={classes.TittleItemText}>{produto.nome}</p>
           <br/>
-          <p className={classes.TextItem}>US$ {produto.preco}</p>  
+          <p className={classes.PriceItemText}>US$ {produto.preco}</p>  
           <br/>
-          <p className={classes.TextItem}>{produto.quantidadeStock}Em estoque</p>  
-          <br/>
-          <p className={classes.TextItem}>{produto.quantidade}</p> 
-          <br/>
-          <p className={classes.TextItem}>{produto.imgUrl}</p>
+          <p className={classes.TextItem}>{produto.observacao}</p>
           <br/>
           <Button variant="contained" color="secondary" className={classes.buyButton}>Buy</Button>
         </Grid>
